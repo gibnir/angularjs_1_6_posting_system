@@ -1,0 +1,186 @@
+angularjs 1.6 Posting System example
+====================================
+
+html, css, bootstrap 3.3.7, javascript es5,
+angularjs 1.6: controllers, directives, services.
+sanitize, $http, ng-repeat, ng-model, filters.
+
+
+Objective:
+Implement a posting system (Comments/Issues/Tasks/etc.)
+
+
+Implement a simple issue posting system that supports inline HTML and Tags.
+
+===============================================================
+
+Display a list of elements on the screen based on the following API definition:
+ 
+{
+  id: “1”,
+ title: “This is an item”,
+  text: “This is a description of the item, it might describe a bug/task/comment, it can also display <a href=”www.google.com”>Links</a>”
+  tags: [“bug”, “issue”, “etc”]
+}
+
+--done
+
+===============================================================
+
+Each element on the screen should support the following features:
+	An element should be read only by default (with no input 	elements. --done
+	In read only mode, internal element text should support 	HTML tags. --done
+	Each comment element should have the following buttons:
+	Edit - Clicking on an Edit button should transform the 	element into an editable widget that allows modified all 	the properties of the element. --done
+                                                                           	i. When in edit mode, there should be a way to cancel the 	changes or save them. --not done
+                                                                         	ii. Allow adding existing tags, based on tags in other 	elements (--done) or new ones if the user types a tag that 	doesn’t exist (--not done).
+                                                                       	iii. Comment text should support simple html tags.
+	Delete – Deletes a comment element --done
+
+===============================================================
+
+On the top of the page, there should be a way to filter elements based on tags. The user should only be able to select tags that are available in any of the elements. --done
+
+===============================================================
+
+At the end of the comment list, there should always be an editable comment element for adding new comments.
+
+===============================================================
+
+General Guidelines
+
+Use AngularJS (v1.x) (Preferably 1.4) – You can use Angular 2.0 as well. (but not 4.0 please). --AngularJS v1.6
+Define at least one Controller, one Service and two Directives
+--done
+Use LESS/SASS (Bootstrap styling is fine, try to add some custom modifications) --only Bootstrap 3.3.7
+
+Since there’s no API defined, use mock data in the form of a .json file, but utilize Angular Resources for that.
+Only one place should be aware of the Mock usage. The rest of the code should work with it as if it’s coming from an API.
+
+Commit the result to Github/BitBucket --done
+
+No need for RTF support, simple html tags are enough
+The screenshots I provided are just for general idea. There is no requirement to use that specific UI design.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

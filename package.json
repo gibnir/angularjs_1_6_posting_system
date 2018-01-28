@@ -1,0 +1,16 @@
+{
+  "name": "angularjs_1_6_posting_system",
+  "version": "1.0.0",
+  "description": "Implement a posting system (Comments/Issues/Tasks/etc.)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nir Gibli",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.7",
+    "angular-sanitize": "^1.6.7",
+    "bootstrap": "^3.3.7"
+  }
+}

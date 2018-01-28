@@ -1,0 +1,51 @@
+<!--  Review Form -->
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<!--  Review Form -->
+			<h4>Submit a Post</h4>
+		</div>
+		<div class="panel-body">
+			<form 
+				name="postForm"
+				ng-submit="postForm.$valid && addPostCtrl.addPost(postList)"
+				novalidate>
+
+				<!--  Review Form -->
+				<fieldset class="form-group">
+					<select 
+						class="form-control"
+						ng-model="addPostCtrl.post.tags"
+						ng-options="tags for tags in ['bug','issue','etc']"
+						title="Tags"
+						required>
+						<option value="">Tag the Post</option>
+					</select>
+				</fieldset>
+				<fieldset class="form-group">
+					<textarea
+						class="form-control"
+						ng-model="addPostCtrl.post.title"
+						placeholder="Write a post title..."
+						title="Title"
+						required></textarea>
+				</fieldset>
+
+				<fieldset class="form-group">
+					<textarea
+						class="form-control"
+						ng-model="addPostCtrl.post.text"
+						placeholder="Write a post..."
+						title="Text"
+						required></textarea>
+				</fieldset>
+
+			 	<div> postForm is {{postForm.$valid}} </div>
+				<fieldset class="form-group">
+					<input 
+						type="submit"
+						class="btn btn-primary pull-right"
+						value="Submit Post" />
+				</fieldset>
+			</form>
+		</div>
+	</div>

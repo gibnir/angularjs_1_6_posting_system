@@ -1,0 +1,99 @@
+<ul>
+		<h4>Tags</h4>
+
+		<div class="row">
+		  <div class="col-lg-6">
+		    <div class="input-group">
+		      <input
+		      		type="text"
+		      		class="form-control"
+		      		placeholder="Search for..." 
+		      		ng-model="$ctrl.query" />
+		      <span class="input-group-btn">
+		        <button class="btn btn-default" type="button">Go!</button>
+		      </span>
+		    </div>
+		  </div>
+		</div>
+
+		<li ng-repeat="post in postList.posts | filter:$ctrl.query">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">{{post.title}}    <span class="badge">{{post.tags}}</span></h3>
+				</div>
+				<div class="panel-body" ng-bind-html="post.text">
+					
+				</div>
+				<div class="panel-footer">
+					<!-- <button 
+						type="button"
+						class="btn btn-default"
+						ng-click="postCtrl.toggleEditButton()">Edit</button> -->
+					<button 
+						type="button"
+						class="btn btn-default"
+						ng-hide="visible"
+						ng-click="visible = !visible">Edit</button>
+					<button 
+						type="button"
+						class="btn btn-default"
+						ng-click="postCtrl.removePost(postList, $index)">Delete</button>
+				</div>
+				
+				<!-- <div 
+					class="panel panel-default"
+					ng-show="postCtrl.visible"> -->
+
+					<div 
+					class="panel panel-default"
+					ng-show="visible">
+				
+					<div class="panel-heading">
+						<!--  Review Form -->
+						<h4>Edit a Post</h4>
+					</div>
+					<div class="panel-body">
+						<form 
+							name="editForm"
+							ng-submit="editForm.$valid && postCtrl.editPost(post)">
+
+							<!--  Review Form -->
+							<fieldset class="form-group">
+								<select 
+									class="form-control"
+									ng-model="post.tags"
+									ng-options="tags for tags in ['bug','issue','etc']"
+									title="Tags">
+									<option value="">Tag the Post</option>
+								</select>
+							</fieldset>
+							<fieldset class="form-group">
+								<textarea
+									class="form-control"
+									ng-model="post.title"
+									placeholder="edit post title..."
+									title="Title"></textarea>
+							</fieldset>
+
+							<fieldset class="form-group">
+								<textarea
+									class="form-control"
+									ng-model="post.text"
+									placeholder="edit a post..."
+									title="Text"></textarea>
+							</fieldset>
+
+						 	<fieldset class="form-group">
+								<input 
+									type="submit"
+									class="btn btn-primary pull-right"
+									ng-click="visible = !visible"
+									value="Save" />
+							</fieldset>
+						</form>
+					</div>
+				</div>
+
+			</div>
+		</li>
+	</ul>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+    <head>
+		<title>angularjs 1.6 example posting system</title>
+		
+		<link href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+			  rel="stylesheet" type="text/css" />
+
+		<!-- <link  href="style/css.css"rel="stylesheet" type="text/css" /> -->
+		
+		</head>
+	<body ng-controller="appController as postList">
+		<div class="container">
+			<component-header></component-header>
+			<component-reviews></component-reviews>
+			<component-post-list></component-post-list>
+			<component-add-post></component-add-post>
+
+	
+		</div>
+		
+ 
+		<script src="node_modules/angular/angular.min.js" type="text/javascript"></script>	
+		<script src="node_modules/angular-sanitize/angular-sanitize.min.js" type="text/javascript"></script>	
+		<script src="app/app.js" type="text/javascript"></script>	
+		<script src="app/services/services.js" type="text/javascript"></script>	
+		<script src="app/controllers/controllers.js" type="text/javascript"></script>	
+		<script src="app/directives/directives.js" type="text/javascript"></script>	
+
+	</body>
+</html>
