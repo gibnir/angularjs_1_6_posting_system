@@ -17,7 +17,7 @@
 		</div>
 
 		<li ng-repeat="post in postList.posts | filter:$ctrl.query">
-			<div class="panel panel-default">
+			<div class="panel panel-default" ng-hide="visible">
 				<div class="panel-heading">
 					<h3 class="panel-title">{{post.title}}    <span class="badge">{{post.tags}}</span></h3>
 				</div>
@@ -32,7 +32,6 @@
 					<button 
 						type="button"
 						class="btn btn-default"
-						ng-hide="visible"
 						ng-click="visible = !visible">Edit</button>
 					<button 
 						type="button"
@@ -40,11 +39,10 @@
 						ng-click="postCtrl.removePost(postList, $index)">Delete</button>
 				</div>
 				
-				<!-- <div 
-					class="panel panel-default"
-					ng-show="postCtrl.visible"> -->
+					
 
-					<div 
+			</div>
+			<div 
 					class="panel panel-default"
 					ng-show="visible">
 				
@@ -86,14 +84,18 @@
 						 	<fieldset class="form-group">
 								<input 
 									type="submit"
-									class="btn btn-primary pull-right"
+									class="btn btn-primary"
 									ng-click="visible = !visible"
 									value="Save" />
+									
+									<input 
+									type="submit"
+									class="btn btn-default"
+									ng-click="visible = !visible"
+									value="Cancel" />
 							</fieldset>
 						</form>
 					</div>
 				</div>
-
-			</div>
 		</li>
 	</ul>

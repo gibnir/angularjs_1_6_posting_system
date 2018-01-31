@@ -62,6 +62,19 @@ Commit the result to Github/BitBucket --done
 No need for RTF support, simple html tags are enough
 The screenshots I provided are just for general idea. There is no requirement to use that specific UI design.
 
+===============================================================
+
+Bonus (optional) – Auto Calculate basic math expressions:
+*. In View mode, detect basic math expressions and display the calculated result instead of the equation.
+*. The system should only support  basic expressions with + and – operators. Parenthesis are not supported.
+*. The calculation logic should be manually written, no library should be used for the calculation logic (e.g. Eval)
+*. Basically, you should implement a “Calculate” method that accepts a string (valid one) and returns a number (the result)
+	i. The method should parse the string and perform the 	calculation.
+
+*. Example:
+	i. If a user edits a comment and writes the following in 	the comment: “4+5-6”, when saving the comment, in View 	mode, the text should be 3.
+	ii. You can be creative if you want in regards to how you 	display that the value is calculated by an expression.
+
 
 
 
